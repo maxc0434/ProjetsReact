@@ -1,12 +1,42 @@
-import React from 'react'
+import React from "react";
+import Wrapper from "./Wrapper";
 
-function Cars() {
-  return (
-    <div>
-      
-    </div>
-  )
-}
 
-export default Cars
+const Cars = ({ children, color }) => {
 
+  const colorInfo = color ? color : "Néant";
+
+    return children && (
+        <Wrapper>
+          <p> Marque: {children} </p>
+          <p> Couleur: {colorInfo} </p>
+        </Wrapper>
+    )
+  };
+
+export default Cars;
+
+// - Propriété (ou props) : permet de transmettre des données ou un comportement defini d'un composant parent à enfant.
+// C'est un objet. Permet aussi de personnaliser et/ou alimenter un composant sans modifier son code.
+
+// - props => transmet des données / children => inclus du contenu entre les balises ouvrantes/fermantes du composant.
+
+// - children: permet d'ajouter du contenu dans un composant et d'acceder a ce contenu . Cela correspond a ce qu'il y a
+// entre les balises ouvrantes/fermantes du parent ( nous concernant les balises <Wrapper> )
+
+//
+
+// - destructuring = destructuration de l'objet. dans notre cas : const Cars = ({ children, color, et toutes les autres propriétées de l'objet })
+
+// && = remplace le if/else, vérifie si le children existe. S'il n'existe pas, il ne l'affiche pas.
+
+// - Exemple de promesse
+// const promesse = new Promise ((resolve, reject) => {
+//   ici il y aurait une operation asynchrone
+//   if (jai_compris){
+//     resolve("success");
+//   }
+//   else (jai_pas_compris){
+//     reject("echec");
+//   }
+// })
