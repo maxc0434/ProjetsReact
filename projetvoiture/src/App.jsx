@@ -1,33 +1,20 @@
-
-import { Component } from "react";
-import "./App.css";
-import MyCars from "./components/MyCars";
-
-
+import { Component } from 'react';
+import Mycars from './components/Mycars';
+import './App.css';
 
 class App extends Component {
+
   state = {
-    titre: 'Mon catalogue Voitures',
-    sous_titre: "mes modèles",
-    color: 'green',
-    
-  };
+    titre: 'Mon Catalogue Voitures'
+  }
 
   render() {
     return (
-
-      <div>
-        <MyCars 
-          title={this.state.titre} 
-          subtitle={this.state.sous_titre} 
-          myColor={this.state.color} />
-        {/* ou alors <MyCars></MyCars> c'est pareil, c'est util lorsqu'on veut ajouter des composant enfant etre ces 2 balises */}
+      <div className='App'>
+        <Mycars title={this.state.titre} />
       </div>
-    );
+    )
   }
 }
 
-
 export default App;
-
-
