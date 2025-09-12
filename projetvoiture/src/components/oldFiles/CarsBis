@@ -26,7 +26,7 @@ export default Cars;
 // entre les balises ouvrantes/fermantes du parent ( nous concernant les balises <Wrapper> )
 // Sens du passage de la donnée => generalement de l'enfant au parent
 
-//
+// - map: 
 
 // - destructuring = destructuration de l'objet. dans notre cas : const Cars = ({ children, color, et toutes les autres propriétées de l'objet })
 
