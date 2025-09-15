@@ -2,7 +2,7 @@ import Wrapper from "./Wrapper";
 
 
 
-const Car = ({ color, children, year, annee }) => {
+const Car = ({ color, children, age, year }) => {
   const colorInfo = color ? <p>Couleur: {color}</p> : <p>Couleur: "Néant"</p>;
 
   if (children) {
@@ -10,8 +10,8 @@ const Car = ({ color, children, year, annee }) => {
       
       <Wrapper>
         <p>Marque: {children}</p>
-        <p>Age: {year}</p>
-        <p>Sortie en : {annee}</p>
+        <p>Age: {age}</p>
+        <p>Sortie en : {year}</p>
         {colorInfo}
       </Wrapper>
     );

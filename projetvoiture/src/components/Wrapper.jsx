@@ -10,6 +10,7 @@ export default function Wrapper({children}) {
           margin: "10px auto",
           borderRadius: "45px",
           
+          
         }}>
 
       {children}
