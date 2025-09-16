@@ -1,0 +1,17 @@
+// import React from 'react';
+
+// const Toto = props => {
+//     console.log(props);
+//     const btnReponseToto = props.leStateProps.messageMaman !== null ? (<button onClick={props.reponseTotoProps}>Réponse de Toto</button>) : ( <button disabled>Réponse de Toto</button>)
+
+//     return (
+//         <div>
+//             <h2>{props.nameProps}</h2>
+//             {btnReponseToto}
+//             <p>{props.leStateProps.messageToto}</p>
+
+//         </div>
+//     )
+// }
+
+// export default Toto;

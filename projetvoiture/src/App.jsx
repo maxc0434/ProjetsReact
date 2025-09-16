@@ -4,6 +4,7 @@ import './App.css';
 import Welcome from './components/Welcome';
 import Maman from './components/Maman';
 
+
 class App extends Component {
 
   state = {
@@ -17,7 +18,8 @@ class App extends Component {
 
         <Welcome/>
 
-        <Maman/>
+        <Maman />
+
       </div>
     )
   }
