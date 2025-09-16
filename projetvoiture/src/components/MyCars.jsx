@@ -1,14 +1,17 @@
 import { Component } from "react";
-import Car from "./Cars";
+import Cars from "./Cars";
+import car from "../assets/car.png"
+import whiteCar from "../assets/whitecar.svg"
+import blueCar from "../assets/blueCar.svg"
 
 class Mycars extends Component {
   state = {
     voitures: [
-      { name: "Ford", color: "red", year: 2000 },
+      { name: "Ford", color: "red", year: 2000, img: car },
 
-      { name: "Mercedes", color: "black", year: 2010 },
+      { name: "Mercedes", color: "white", year: 2010, img: whiteCar },
 
-      { name: "Peugeot", color: "blue", year: 2025 },
+      { name: "Peugeot", color: "blue", year: 2025, img: blueCar },
     ],
   };
 
@@ -38,15 +41,17 @@ class Mycars extends Component {
 
         <button onClick={this.addTenyears}> + 10ans </button>
 
-        {this.state.voitures.map(({ name, color, year }, index) => {
+        {this.state.voitures.map(({ name, color, year, img }, index) => {
           return (
             <div key={index}>
-              <Car 
+              <Cars 
               color={color} 
               age={this.getAge(year)} 
-              year={year}>
+              year={year}
+              img={img}>
                 {name}
-              </Car>
+                
+              </Cars>
             </div>
           );
         })}
