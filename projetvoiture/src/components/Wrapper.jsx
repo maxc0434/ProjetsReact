@@ -4,7 +4,7 @@ export default function Wrapper({children}) {
 
   return (
     <div style={{
-          backgroundColor: "#5bb85eff",
+          backgroundColor: "#ffffff",
           width: "400px",
           padding: "10px",
           margin: "10px auto",
