@@ -45,11 +45,11 @@ class Mymoto extends Component {
     // Utilisation setState avec fonction qui prend prevState ( prevState = etat précédent, dans notre cas photovisible = false)).
     this.setState( (prevState) => {
       // création d'un nouveau tableau newMotos en parcourant l'ancien tableau avec map.
-      // map renvoi un nouveau tableau soit avec des objet identique OU modifié (dans ce cas on va modifier quelque chose).
+      // map renvoi un nouveau tableau soit avec des objet identique OU modifié (dans ce cas on va modifier quelque chose) de chaque élément indexé dans le tableau.
       const newMotos = prevState.motos.map ((moto,i) => {
-        // si l'index courant (bouton clic dans la card correspondante) correspond à celui passé en argument du map ((moto, i)).
+        // Si l'index courant (bouton clic dans la card correspondante) correspond à celui passé en argument du map ((moto, i)),
         if (i === index ) {
-          // Retourne un copie de l'objet moto en modifiant le state photoVisible de false => true.
+          // Alors on retourne une copie de l'objet moto en modifiant le state photoVisible de false => true.
           // ... = spreadOperator = permet de "copier" un objet avec tous ses paramètres tout en permettant de modifier/ajouter/supprimer 
 // les paramètres de cet objet sans modifier le state de l'objet initial.
           return {...moto, photoVisible: true};

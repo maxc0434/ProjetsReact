@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import CustomBtn from "./CustomBtn";
 
 // CSS
 const Button = styled.button`
@@ -59,7 +60,8 @@ const Motos = ({ children, modele, year, color, engine, img, newImg }) => {
         <Title>Puissance: </Title>
         <h2>{engine} </h2>
 
-        <Button onClick={newImg}>Image au clic</Button>
+        {/* <Button onClick={newImg}>Image au clic</Button> */}
+                <CustomBtn onClick={newImg}>Image au clic</CustomBtn>
 
         <div
           style={{

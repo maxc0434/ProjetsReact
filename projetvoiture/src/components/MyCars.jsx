@@ -3,6 +3,7 @@ import Cars from "./Cars";
 import car from "../assets/car.png"
 import whiteCar from "../assets/whitecar.svg"
 import blueCar from "../assets/blueCar.svg"
+import CustomBtn from "./CustomBtn";
 
 class Mycars extends Component {
   state = {
@@ -69,7 +70,10 @@ class Mycars extends Component {
         <Car annee={this.state.voitures[2].year} year={year - this.state.voitures[2].year + " ans"} color={this.state.voitures[2].color}>
           {this.state.voitures[2].name}
         </Car> */}
+
+
       </div>
+      
     );
   }
 }

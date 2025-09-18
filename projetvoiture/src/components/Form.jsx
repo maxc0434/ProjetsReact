@@ -103,7 +103,7 @@ class Form extends Component {
             <button className="buttonBlue"> bouton Css Test Bootstrap </button>
           </div>
 
-          
+           
         </form>
          
          {/* <h1 className={styles.green}> Le composant MyHead </h1>
@@ -119,6 +119,7 @@ class Form extends Component {
             <Title>Encore Un nouveau Commentaire</Title>
             <Button>Envoyer</Button>
         </div>
+
 
       </div>
     );

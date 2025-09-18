@@ -21,13 +21,13 @@ class App extends Component {
       <div className='App'>
         {/* <Mycars title={this.state.titre} />
 
-        <Image/>
+        <Image/> */}
 
         <Welcome/>
 
-        <Maman />
+        {/* <Maman /> */}
 
-        <Form
+        {/* <Form
         head={true} /> */}
         
         <Mymoto 
