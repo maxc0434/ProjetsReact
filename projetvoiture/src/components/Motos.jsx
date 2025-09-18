@@ -16,7 +16,7 @@ const Button = styled.button`
 `;
 
 const Title = styled.h1`
-  color: red;
+  color: #040303;
   font-size: 30px;
   text-decoration: underline;
 `;
@@ -43,7 +43,8 @@ const Image = styled.div`
 // FIN CSS
 
 
-const Motos = ({ children, modele, year, color, engine, img }) => {
+
+const Motos = ({ children, modele, year, color, engine, img, newImg }) => {
   return (
     <div>
       <Card>
@@ -58,17 +59,25 @@ const Motos = ({ children, modele, year, color, engine, img }) => {
         <Title>Puissance: </Title>
         <h2>{engine} </h2>
 
-        <Button>Image au clic</Button>
+        <Button onClick={newImg}>Image au clic</Button>
 
         <div
           style={{
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
-          }}
-        >
-          
-          <Image>  La Bête {img} </Image>
+          }}>
+
+            {/* s'il y a une image importé a affiché dans la props img on l'affiche */}
+          { img ? (
+            <Image> 
+              <img src={img} style={{width: "500px"}}/>   
+            </Image>
+          ) : (
+            // sinon on affiche le texte
+            <p>La Bête</p>
+          )}
+
         </div>
       </Card>
     </div>
