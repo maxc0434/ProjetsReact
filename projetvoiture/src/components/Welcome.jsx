@@ -1,5 +1,21 @@
 import CustomBtn from "./CustomBtn";
 
+const monBoutonCustom = { 
+    backgroundColor: "green"
+}
+
+const helloWorld = () => {
+    alert('Hello World')
+}
+
+const monBoutonRouge = {
+
+}
+
+const changeColorBtn = (e) => {
+     e.target.style.backgroundColor = 'red';
+}
+
 const Welcome = () => {
     
 
@@ -23,14 +39,10 @@ const Welcome = () => {
 
 
         
-        <CustomBtn> Cliquez ici </CustomBtn>
-        <CustomBtn style={{ backgroundColor: "blue" }}> Cliquez LA </CustomBtn>
-        <CustomBtn style={{ backgroundColor: "orange", 
-                            borderRadius: "45px", 
-                            fontWeight: "bold", 
-                            border: "solid", 
-                            color: "green",
-                            fontSize: "20px" }}> Non, CLIQUE ici en fait </CustomBtn>
+        <CustomBtn pimpMyBtn={monBoutonCustom} handleClick={() => alert("youpiiii")}> Cliquez ici </CustomBtn>
+        <CustomBtn handleClick={helloWorld} > Cliquez LA </CustomBtn>
+        
+        <CustomBtn pimpMyBtn={monBoutonRouge} handleClick={changeColorBtn}> Non, CLIQUE ici en fait </CustomBtn>
 
 
 </div>

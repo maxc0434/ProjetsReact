@@ -1,6 +1,6 @@
 // import React from "react";
 
-function CustomBtn({ children, style = {}, ...props }) {
+const CustomBtn = ({ children, pimpMyBtn, handleClick }) => {
 
   const myButton = {
     background: "grey",
@@ -15,10 +15,11 @@ function CustomBtn({ children, style = {}, ...props }) {
     margin: '5px auto',
   };
 
-  const pimpMyBtn = { ...myButton, ...style };
+  // const pimpMyBtn = { ...myButton, ...style };
 
   return (
-    <button style={pimpMyBtn} {...props}> {children} </button>
+    <button style={{...myButton, ...pimpMyBtn}}
+            onClick={handleClick} > {children} </button>
   );
 }
 
