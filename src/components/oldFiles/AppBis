@@ -1,0 +1,62 @@
+
+import { Component } from "react";
+import "./App.css";
+import MyCars from "./components/oldFiles/MyCarsBis";
+
+
+
+class App extends Component {
+  state = {
+    titre: 'Mon catalogue Voitures',
+    color: 'green',
+    sous_titre: "mes modèles",
+    subcolor: "blue"
+    
+  };
+
+  changeTitle = () => {
+    this.setState({ titre: "En fait non, roule à moto!" });
+  }
+
+  changeViaParam = (titre) => {
+    this.setState({titre: titre});
+  }
+
+    changeViaBind = (param) => {
+    this.setState({titre: param});
+  }
+
+  changeViaInput = (e) => {
+    this.setState({
+      titre: e.target.value
+    })
+  }
+
+  render() {
+    return (
+
+      <div>
+        <MyCars 
+          title={this.state.titre} 
+          subtitle={this.state.sous_titre} 
+          myColor={this.state.color} 
+          subColor={this.state.subcolor}/>
+        {/* ou alors <MyCars></MyCars> c'est pareil, c'est util lorsqu'on veut ajouter des composant enfant etre ces 2 balises */}
+       
+       
+        <button onClick={this.changeTitle}> changer le titre en dur </button>
+        <button onClick={() => this.changeViaParam('voici le nouveau titre')}> changer le titre via parametre </button>
+        <button onClick={this.changeViaBind.bind(this, 'Bind, James Bind')}> Bouton Bind </button>
+
+        <input type="text" onChange={this.changeViaInput} value={this.state.titre} />
+
+      </div>
+
+    );
+  }
+}
+
+
+export default App;
+
+

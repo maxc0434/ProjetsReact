@@ -1,0 +1,37 @@
+import { Component } from "react";
+import Toto from "./TotoBis";
+
+class Maman extends Component {
+
+    state = {
+        messageMaman: null,
+        messageToto: null,
+    }
+
+    ordreMaman = () => {
+        this.setState({messageMaman: "Va ranger ta chambre ou je t'en colle une"})
+    }
+
+    reponseToto = () => {
+        this.setState({messageToto: 'Oki doki'})
+    }
+
+    render() {
+        return (
+            <div>
+                <h1>Maman</h1>
+
+                <button onClick={this.ordreMaman}>Ordre de la maman</button>
+                <p> {this.state.messageMaman} </p>
+                
+                <Toto nameProps="Toto" 
+                      reponseTotoProps={this.reponseToto} 
+                      leStateProps={this.state} 
+                />
+            
+            </div>
+        )
+    }
+}
+
+export default Maman

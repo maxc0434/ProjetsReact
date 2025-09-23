@@ -1,0 +1,48 @@
+import React, { Component } from "react";
+import Cars from "./Cars";
+import MyHeader from "../MyHeader";
+
+class MyCars extends Component {
+  state = {
+    cars: ["Mercedes", "Aston Martin", "Lotus"],
+  };
+
+  noCopy = () => {
+    alert("merci de ne pas copier ce texte");
+  };
+
+  addStyle = (e) => {
+    console.log(e.target);
+
+    if (e.target.classList.contains("styled")) {
+      e.target.classList.remove("styled");
+    } else {
+      e.target.classList.add("styled");
+    }
+  };
+
+  render() {
+    console.log(this);
+    return (
+      <div>
+        <MyHeader myStyle={this.props.myColor}>
+          <h1 
+          // onMouseOver={this.addStyle}
+          >{this.props.title}</h1>
+
+          <p onCopy={this.noCopy}>
+            Voici le texte qu'on ne peut pas copier/coller
+          </p>
+        </MyHeader>
+
+        <MyHeader myStyle={this.props.subColor}>{this.props.subtitle}</MyHeader>
+
+        <Cars color="bleu">{this.state.cars[0]}</Cars>
+        <Cars color="blanc">{this.state.cars[1]}</Cars>
+        <Cars color="rouge">{this.state.cars[2]}</Cars>
+      </div>
+    );
+  }
+}
+
+export default MyCars;
